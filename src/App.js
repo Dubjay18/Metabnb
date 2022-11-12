@@ -13,7 +13,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/Nfts' element={<NFTs />} />
+        <Route path='/placeToStay' element={<NFTs />} />
       </Routes>
     </div>
   );

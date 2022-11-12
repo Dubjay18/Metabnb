@@ -2,6 +2,7 @@ import { Setting5 } from "iconsax-react";
 import React from "react";
 import Card from "../components/Card";
 import Layout from "../components/Layout";
+import { motion } from "framer-motion";
 const imgArray = [
   "/card1.png",
   "/card2.png",
@@ -20,6 +21,30 @@ const imgArray = [
   "/cardn7.png",
   "/cardn8.png",
 ];
+const containerVariant = {
+  hidden: {
+    y: 20, //move out of the site
+  },
+  visible: {
+    y: 0, // bring it back to nrmal
+    transition: {
+      delay: 1.5,
+      //use this instead of delay
+      staggerChildren: 0.2, //apply stagger on the parent tag
+    },
+  },
+};
+
+const itemVariant = {
+  hidden: {
+    y: -110, //move out of the site
+    opacity: 0,
+  },
+  visible: {
+    y: 0, // bring it back to nrmal
+    opacity: 1,
+  },
+};
 function NFTs() {
   return (
     <div>
@@ -38,11 +63,19 @@ function NFTs() {
             <Setting5 size='20' />
           </li>
         </ul>
-        <div className='px-6 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 w-fit mx-auto mb-10'>
+        <motion.div
+          variants={containerVariant}
+          initial='hidden'
+          animate='visible'
+          className='px-6 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 w-fit mx-auto mb-10'>
           {imgArray.map((e, i) => {
-            return <Card img={e} key={i} alt={e} />;
+            return (
+              <motion.div variants={itemVariant} key={i}>
+                <Card img={e} alt={e} />
+              </motion.div>
+            );
           })}
-        </div>
+        </motion.div>
       </Layout>
     </div>
   );

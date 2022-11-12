@@ -1,4 +1,3 @@
-import { HambergerMenu } from "iconsax-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CustomModal from "./CustomModal";
@@ -33,14 +32,14 @@ function Layout({ children }) {
             className='cursor-pointer hover:underline'>
             Home
           </Link>
-          <li className='cursor-pointer hover:underline'>
-            Place to stay
-          </li>
           <Link
-            to='/Nfts'
+            to={"/placeToStay"}
             className='cursor-pointer hover:underline'>
-            NFTs
+            Place to stay
           </Link>
+          <li className='cursor-pointer hover:underline'>
+            NFTs
+          </li>
           <li className='cursor-pointer hover:underline'>
             Community
           </li>
@@ -51,7 +50,7 @@ function Layout({ children }) {
             background:
               "linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)",
           }}
-          className='rounded-[10px] lg:block hidden text-white md:text-[16px] md:px-5 md:py-3 py-1 px-2 text-[14px] '>
+          className='hover:opacity-75 transition-all duration-500 hover:scale-95 rounded-[10px] lg:block hidden text-white md:text-[16px] md:px-5 md:py-3 py-1 px-2 text-[14px] '>
           Connect Wallet
         </button>
         {/* <HambergerMenu
@@ -97,16 +96,15 @@ function Layout({ children }) {
                 className='cursor-pointer hover:underline border-gray-400 my-8 uppercase border-b'>
                 Home
               </Link>
-              <li
+              <Link
+                to='/placeToStay'
                 onClick={() => setIsNavOpen(false)}
                 className='cursor-pointer hover:underline border-gray-400 my-8 uppercase border-b'>
                 Place to stay
-              </li>
-              <Link
-                to='/Nfts'
-                className='cursor-pointer hover:underline border-gray-400 my-8 uppercase border-b'>
-                NFTs
               </Link>
+              <li className='cursor-pointer hover:underline border-gray-400 my-8 uppercase border-b'>
+                NFTs
+              </li>
               <li
                 onClick={() => setIsNavOpen(false)}
                 className='cursor-pointer hover:underline border-gray-400 my-8 uppercase border-b'>
@@ -122,7 +120,7 @@ function Layout({ children }) {
                     background:
                       "linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)",
                   }}
-                  className='rounded-[10px]  text-white md:text-[16px] md:px-5 md:py-3 py-1 px-2 text-[14px] '>
+                  className='hover:opacity-75 transition-all duration-500 hover:scale-95 rounded-[10px]  text-white md:text-[16px] md:px-5 md:py-3 py-1 px-2 text-[14px] '>
                   Connect Wallet
                 </button>
               </li>
@@ -135,7 +133,7 @@ function Layout({ children }) {
       <style>{`
       .hideMenuNav {
         top: -1000px;
-     
+        left: 0;
         position: fixed;
         width: 100%;
         height: 100vh;
