@@ -26,7 +26,7 @@ function Layout({ children }) {
         }}
         className='flex items-center my-10 justify-between md:w-[80%] w-[95%] mx-auto md:gap-0 gap-5'>
         <img src='/Group.png' alt='' />
-        <ul className='lg:flex hidden items-center gap-6'>
+        <ul className='lg:flex hidden items-center gap-10'>
           <Link
             to='/'
             className='cursor-pointer hover:underline'>

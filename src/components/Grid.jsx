@@ -38,9 +38,16 @@ const itemVariant = {
 function Grid() {
   return (
     <div>
-      <h2 className='font-[700] flex items-center justify-center md:text-[48px] my-10'>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 0.5,
+          delay: 0.5,
+        }}
+        className='font-[700] flex items-center justify-center text-center md:text-[48px] text-[24px] my-10 w-[90%] mx-auto'>
         Inspiration for your next adventure
-      </h2>
+      </motion.h2>
       <motion.div
         variants={containerVariant}
         initial='hidden'
