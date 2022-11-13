@@ -1,23 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
 function Hero() {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 40,
-        x: 0,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        x: 0,
-      }}
-      transition={{
-        duration: 0.5,
-        delay: 0.5,
-      }}
-      className='w-[80%] mx-auto lg:gap-5 gap-10 flex lg:flex-nowrap flex-wrap lg:flex-row flex-col items-center justify-evenly mt-20 mb-24'>
+    <div className='w-[80%] mx-auto lg:gap-5 gap-10 flex lg:flex-nowrap flex-wrap lg:flex-row flex-col items-center justify-evenly mt-20 mb-24'>
       <div className='md:max-w-2xl max-w-[80vw]'>
         <h4 className='md:text-[56px] text-[40px] font-[400] leading-[140%] text-[#434343]'>
           Rent a{" "}
@@ -60,7 +44,7 @@ function Hero() {
         <img src='/Group-hero.png' alt='' />
       </div>
       {/* <img src='/Group-hero.png' width='100vw' alt='' /> */}
-    </motion.div>
+    </div>
   );
 }
 

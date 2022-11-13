@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CustomModal from "./CustomModal";
 import Footer from "./Footer";
-import { motion } from "framer-motion";
 import { Add, ArrowRight2 } from "iconsax-react";
 
 function Layout({ children }) {
@@ -21,7 +20,7 @@ function Layout({ children }) {
   return (
     <>
       {nav && (
-        <motion.nav
+        <nav
           className={`flex items-center my-0 !w-[100%]
          fixed   md:px-28 px-3 shadow py-2 bg-white
           justify-between mx-auto md:gap-0 gap-5 transiton-all top-0 duration-100`}>
@@ -127,23 +126,9 @@ function Layout({ children }) {
               </ul>
             </div>
           </section>
-        </motion.nav>
+        </nav>
       )}
-      <motion.nav
-        initial={{
-          opacity: 0,
-          y: -40,
-          x: 0,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          x: 0,
-        }}
-        transition={{
-          duration: 0.5,
-          delay: 0.5,
-        }}
+      <nav
         className={`flex items-center ${
           nav ? "!opacity-0" : "opacity-100"
         }  justify-between md:w-[80%] w-[95%] my-10 mx-auto md:gap-0 gap-5 transiton-all top-0 duration-300`}>
@@ -249,7 +234,7 @@ function Layout({ children }) {
             </ul>
           </div>
         </section>
-      </motion.nav>
+      </nav>
       {children}
       <Footer />
       <style>{`

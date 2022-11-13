@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/placeToStay' element={<NFTs />} />
+        <Route path='/*' element={<Main />} />
       </Routes>
     </div>
   );
