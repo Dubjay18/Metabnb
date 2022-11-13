@@ -33,7 +33,7 @@ function Hero() {
             Metaverse
           </span>
         </h4>
-        <p className='font-[400] md:text-[24px] text-[18px]'>
+        <p className='font-[400] md:text-[24px] text-[#434343] text-[18px]'>
           we provide you access to luxury and affordable
           houses in the metaverse, get a chance to turn your
           imagination to reality at your comfort zone
