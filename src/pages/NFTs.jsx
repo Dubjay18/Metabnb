@@ -27,6 +27,8 @@ const containerVariant = {
   },
   visible: {
     y: 0, // bring it back to nrmal
+    duration: 0.5,
+    delay: 0.5,
     transition: {
       delay: 1.5,
       //use this instead of delay
@@ -49,7 +51,14 @@ function NFTs() {
   return (
     <div>
       <Layout>
-        <ul className='no-scrollbar flex w-[80%] mx-auto items-center gap-16 mb-10  mt-14 overflow-scroll'>
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+          }}
+          className='no-scrollbar flex w-[80%] mx-auto items-center gap-16 mb-12  mt-20 overflow-scroll'>
           <li>Resturant</li>
           <li>Cottage</li>
           <li>Castle</li>
@@ -62,12 +71,12 @@ function NFTs() {
             <span>location</span>
             <Setting5 size='20' />
           </li>
-        </ul>
+        </motion.ul>
         <motion.div
           variants={containerVariant}
           initial='hidden'
           animate='visible'
-          className='px-6 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 w-fit mx-auto mb-10'>
+          className='px-6 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 w-fit mx-auto mb-12'>
           {imgArray.map((e, i) => {
             return (
               <motion.div variants={itemVariant} key={i}>

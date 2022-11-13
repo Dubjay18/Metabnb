@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import CustomModal from "./CustomModal";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import { Add, ArrowRight2 } from "iconsax-react";
 
 function Layout({ children }) {
   const [showModal, setShowModal] = useState(false);
@@ -50,7 +51,7 @@ function Layout({ children }) {
             background:
               "linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)",
           }}
-          className='hover:opacity-75 transition-all duration-500 hover:scale-95 rounded-[10px] lg:block hidden text-white md:text-[16px] md:px-5 md:py-3 py-1 px-2 text-[14px] '>
+          className='hover:opacity-75 transition-all duration-500 hover:scale-95 rounded-[10px] lg:block hidden text-white md:text-[16px] h-[48px] w-[170px] py-1 px-2 text-[14px] '>
           Connect Wallet
         </button>
         {/* <HambergerMenu
@@ -120,7 +121,7 @@ function Layout({ children }) {
                     background:
                       "linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)",
                   }}
-                  className='hover:opacity-75 transition-all duration-500 hover:scale-95 rounded-[10px]  text-white md:text-[16px] md:px-5 md:py-3 py-1 px-2 text-[14px] '>
+                  className='hover:opacity-75 transition-all duration-500 hover:scale-95 rounded-[10px]  text-white md:text-[16px] md:px-5 md:py-3 py-2 px-3 text-[14px] '>
                   Connect Wallet
                 </button>
               </li>
@@ -162,7 +163,7 @@ function Layout({ children }) {
               Connect Wallet
             </h2>
             <button onClick={() => setShowModal(false)}>
-              X
+              <Add size={24} className='rotate-45' />
             </button>
           </div>
           <br />
@@ -177,7 +178,7 @@ function Layout({ children }) {
               <img src='/metafox.png' alt='metamask' />{" "}
               <p>Metamask</p>
             </div>
-            <code>{">"}</code>
+            <ArrowRight2 size={24} />
           </div>
           <br />
           <div className='flex items-center justify-between border-[1px] hover:bg-[#CFD8DC] cursor-pointer  rounded-[12px] border-[#CFD8DC] py-4 px-3 w-[90%] mx-auto'>
@@ -185,7 +186,7 @@ function Layout({ children }) {
               <img src='/opensea.png' alt='metamask' />{" "}
               <p>WalletConnect</p>
             </div>
-            <code>{">"}</code>
+            <ArrowRight2 size={24} />
           </div>
         </div>
       </CustomModal>
