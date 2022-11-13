@@ -34,11 +34,10 @@ function Layout({ children }) {
           }}
           transition={{
             duration: 0.5,
-            delay: 0.5,
           }}
           className={`flex items-center my-0 !w-[100%]
          fixed   md:px-28 shadow py-2 bg-white
-          justify-between mx-auto md:gap-0 gap-5 transiton-all top-0 duration-200`}>
+          justify-between mx-auto md:gap-0 gap-5 transiton-all top-0 duration-100`}>
           <img src='/Group.png' alt='' />
           <ul className='lg:flex hidden items-center gap-10'>
             <Link
